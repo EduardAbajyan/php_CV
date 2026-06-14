@@ -1,0 +1,7 @@
+services:
+  php_cv:
+    build: .
+    container_name: php_cv
+    restart: always
+    ports:
+      - 3000:80

@@ -22,7 +22,6 @@ SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '5cf66fba-824a-11f0-83e1-942f31677102:1-6';
 
 --
 -- Table structure for table `contact_messages`

@@ -25,4 +25,6 @@ RUN printf '%s\n' \
 
 RUN chown -R www-data:www-data /var/www/html
 
+RUN docker-php-ext-install pdo pdo_mysql
+
 EXPOSE 80

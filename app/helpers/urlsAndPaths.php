@@ -2,19 +2,17 @@
 
 function base_url($path = ''): string
 {
-    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'];
+    $host = $_SERVER['HTTP_HOST'] ?? 'eduardabajyan.com';
     $path = trim($path, '/');
-    $base = "{$protocol}://{$host}/{$path}";
-    return $base;
+
+    return "https://{$host}" . ($path ? "/{$path}" : '');
 }
 
 function uploads_url($file = ''): string
 {
-    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'];
+    $host = $_SERVER['HTTP_HOST'] ?? 'eduardabajyan.com';
     $file = ltrim($file, '/');
-    $base = "{$protocol}://{$host}/uploads" . ($file ? "/{$file}" : '');
+    $base = "https://{$host}/uploads" . ($file ? "/{$file}" : '');
     return $base;
 }
 

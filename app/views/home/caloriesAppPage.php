@@ -32,6 +32,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -361,7 +362,7 @@
         <div class="app-intro-content">
             <h1>Calories Tracker App</h1>
             <div class="subtitle">Full-Stack Web Application</div>
-            
+
             <p class="description">
                 A complete nutrition tracking web application that I developed with a custom authentication system. Users can register, login securely, and track their daily meals with real-time caloric calculations and nutritional breakdowns.
             </p>
@@ -398,7 +399,7 @@
                 <p><strong>Password:</strong> demo123</p>
             </div>
 
-            <a href="http://localhost:3000" target="_blank" class="cta-button">
+            <a href="https://calories-app.eduardabajyan.com" target="_blank" class="cta-button">
                 View Live Demo →
             </a>
         </div>

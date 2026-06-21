@@ -30,7 +30,6 @@
                         <img src="<?php echo base_url('asset/images/YSU.jpg') ?>" alt="YSU facade" />
                     </a>
                 </div>
-                <button class="next-page-btn" onclick="window.location.href='<?php echo base_url('page5') ?>'">Next page →</button>
             </div>
             <div class="contrasting col-12 col-md-2" id="middle"></div>
             <div class="col-12 col-md-5" id="educationList">

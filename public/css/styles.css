@@ -589,6 +589,23 @@ body {
 }
 
 @media (max-width: 768px) {
+  .page4.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page4 .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .page4 .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .page4 .row #educationList {
     height: var(--rem-height, 100vh);
   }
@@ -597,7 +614,7 @@ body {
   }
 
   .page4 .row #middle {
-    height: 0px;
+    display: none;
   }
 }
 

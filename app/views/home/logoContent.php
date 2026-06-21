@@ -1,4 +1,4 @@
-<div id="listings" style="position: absolute; bottom: 20px; right: 20px; z-index: 10;">
+<div id="listings" style="position: absolute; bottom: 60px; right: 20px; z-index: 10;">
     <div style="
         display: flex; 
         gap: 20px; 
@@ -8,7 +8,7 @@
         backdrop-filter: blur(10px);
         border-radius: 50px;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.40);
         transition: all 0.3s ease;
     " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 40px rgba(0, 0, 0, 0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 32px rgba(0, 0, 0, 0.4)';">
 

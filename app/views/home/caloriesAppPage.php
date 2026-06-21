@@ -407,7 +407,7 @@
 
     <script type="module" src="<?php echo asset('js/pageListings.js') ?>"></script>
     <script type="module" src="<?php echo asset('js/pageListingsNoScrolling.js'); ?>"></script>
-    <script type="module" src="<?php echo base_url('assets/js/pageListingButtons.js') ?>"></script>
+    <script type="module" src="<?php echo base_url('asset/js/pageListingButtons.js') ?>"></script>
 </body>
 
 </html>

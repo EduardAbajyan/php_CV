@@ -50,7 +50,7 @@
     </div>
     <script type="module" src="<?php echo base_url('asset/js/resizeAboutMeImg.js') ?>"></script>
     <script type="module" src="<?php echo base_url('asset/js/pageListings.js') ?>"></script>
-    <script type="module" src="<?php echo base_url('assets/js/pageListingButtons.js') ?>"></script>
+    <script type="module" src="<?php echo base_url('asset/js/pageListingButtons.js') ?>"></script>
 
 </body>
 

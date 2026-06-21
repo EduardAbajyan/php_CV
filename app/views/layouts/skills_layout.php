@@ -32,7 +32,7 @@
     <script type="module" src="<?php echo base_url('asset/js/pageListings.js') ?>"></script>
     <script type="module" src="<?php echo base_url('asset/js/pageListingsNoScrolling.js') ?>"></script>
     <script type="module" src="<?php echo base_url('asset/js/skillsPage.js') ?>"></script>
-    <script type="module" src="<?php echo base_url('assets/js/pageListingButtons.js') ?>"></script>
+    <script type="module" src="<?php echo base_url('asset/js/pageListingButtons.js') ?>"></script>
 </body>
 
 </html>

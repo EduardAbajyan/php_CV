@@ -18,6 +18,7 @@ export let variables = {
 
   // Touch swipe constants
   TOUCH_SWIPE_THRESHOLD: 50,
+  AXIS_ANGLE_TOLERANCE_DEG: 15,
   touchStartX: 0,
   touchStartY: 0,
 
@@ -87,17 +88,21 @@ export function wheelListings(e) {
 
   // Set new timeout to process accumulated delta
   variables.wheelTimeout = setTimeout(() => {
-    if (
-      Math.abs(variables.wheelDeltaAccumulatorY) >= variables.WHEEL_THRESHOLD
-    ) {
+    const absWheelX = Math.abs(variables.wheelDeltaAccumulatorX);
+    const absWheelY = Math.abs(variables.wheelDeltaAccumulatorY);
+    const angleFromXAxisDeg =
+      (Math.atan2(absWheelY, absWheelX) * 180) / Math.PI;
+    const angleTolerance = variables.AXIS_ANGLE_TOLERANCE_DEG;
+    const isHorizontalScroll = angleFromXAxisDeg <= angleTolerance;
+    const isVerticalScroll = angleFromXAxisDeg >= 90 - angleTolerance;
+
+    if (isVerticalScroll && absWheelY >= variables.WHEEL_THRESHOLD) {
       if (variables.wheelDeltaAccumulatorY > 0) {
         nextpage();
       } else {
         previouspage();
       }
-    } else if (
-      Math.abs(variables.wheelDeltaAccumulatorX) >= variables.WHEEL_THRESHOLD
-    ) {
+    } else if (isHorizontalScroll && absWheelX >= variables.WHEEL_THRESHOLD) {
       if (variables.wheelDeltaAccumulatorX > 0) {
         nextpage();
       } else {
@@ -118,8 +123,22 @@ export function touchlistings(e) {
   const diffX = touchEndX - variables.touchStartX;
   const touchEndY = e.changedTouches[0].clientY;
   const diffY = touchEndY - variables.touchStartY;
+  const absDiffX = Math.abs(diffX);
+  const absDiffY = Math.abs(diffY);
 
-  if (Math.abs(diffY) > variables.TOUCH_SWIPE_THRESHOLD) {
+  if (
+    absDiffX < variables.TOUCH_SWIPE_THRESHOLD &&
+    absDiffY < variables.TOUCH_SWIPE_THRESHOLD
+  ) {
+    return;
+  }
+
+  const angleFromXAxisDeg = (Math.atan2(absDiffY, absDiffX) * 180) / Math.PI;
+  const angleTolerance = variables.AXIS_ANGLE_TOLERANCE_DEG;
+  const isHorizontalSwipe = angleFromXAxisDeg <= angleTolerance;
+  const isVerticalSwipe = angleFromXAxisDeg >= 90 - angleTolerance;
+
+  if (isVerticalSwipe && absDiffY > variables.TOUCH_SWIPE_THRESHOLD) {
     if (diffY > 0) {
       // Swipe down
       previouspage();
@@ -127,7 +146,7 @@ export function touchlistings(e) {
       // Swipe up
       nextpage();
     }
-  } else if (Math.abs(diffX) > variables.TOUCH_SWIPE_THRESHOLD) {
+  } else if (isHorizontalSwipe && absDiffX > variables.TOUCH_SWIPE_THRESHOLD) {
     if (diffX > 0) {
       // Swipe right
       previouspage();

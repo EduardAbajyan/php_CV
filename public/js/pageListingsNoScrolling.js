@@ -35,20 +35,21 @@ function initPageNavigation() {
 
     // Set a timeout to reset the wheel delta accumulator
     variables.wheelTimeout = setTimeout(() => {
+      const absWheelX = Math.abs(variables.wheelDeltaAccumulatorX);
+      const absWheelY = Math.abs(variables.wheelDeltaAccumulatorY);
+      const angleFromXAxisDeg =
+        (Math.atan2(absWheelY, absWheelX) * 180) / Math.PI;
+
       if (
-        Math.abs(variables.wheelDeltaAccumulatorX) >
-        Math.abs(variables.wheelDeltaAccumulatorY)
+        absWheelX > variables.WHEEL_THRESHOLD &&
+        angleFromXAxisDeg <= variables.AXIS_ANGLE_TOLERANCE_DEG
       ) {
-        if (
-          Math.abs(variables.wheelDeltaAccumulatorX) > variables.WHEEL_THRESHOLD
-        ) {
-          if (variables.wheelDeltaAccumulatorX > 0) {
-            // Scrolling right
-            nextpage();
-          } else {
-            // Scrolling left
-            previouspage();
-          }
+        if (variables.wheelDeltaAccumulatorX > 0) {
+          // Scrolling right
+          nextpage();
+        } else {
+          // Scrolling left
+          previouspage();
         }
       }
       variables.wheelDeltaAccumulatorX = 0;
@@ -62,8 +63,16 @@ function initPageNavigation() {
 
     const touchEndX = e.changedTouches[0].clientX;
     const diffX = touchEndX - variables.touchStartX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const diffY = touchEndY - variables.touchStartY;
+    const absDiffX = Math.abs(diffX);
+    const absDiffY = Math.abs(diffY);
+    const angleFromXAxisDeg = (Math.atan2(absDiffY, absDiffX) * 180) / Math.PI;
 
-    if (Math.abs(diffX) > variables.TOUCH_SWIPE_THRESHOLD) {
+    if (
+      absDiffX > variables.TOUCH_SWIPE_THRESHOLD &&
+      angleFromXAxisDeg <= variables.AXIS_ANGLE_TOLERANCE_DEG
+    ) {
       if (diffX > 0) {
         // Swipe right
         previouspage();

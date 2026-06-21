@@ -1,3 +1,5 @@
+import "./pageListingButtons.js";
+
 // Prevent multiple initializations
 if (window.pageListingsInitialized) {
   console.log("Page navigation already initialized, skipping...");
@@ -173,7 +175,7 @@ function initPageNavigation() {
       variables.touchStartY = e.touches[0].clientY;
       variables.touchStartX = e.touches[0].clientX;
     },
-    { passive: true }
+    { passive: true },
   );
 
   window.addEventListener("touchend", touchlistings, { passive: false });

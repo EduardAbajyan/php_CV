@@ -18,6 +18,54 @@ body {
   min-width: 100vw;
 }
 
+.page-listing-nav-button {
+  position: absolute;
+  top: clamp(1rem, 2.2vw, 1.75rem);
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(7.5rem, 14vw, 9.5rem);
+  padding: 0.75rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(63, 34, 21, 0.72);
+  background: linear-gradient(180deg, rgba(255, 246, 227, 0.96), rgba(255, 254, 252, 0.92));
+  color: var(--brown-dark);
+  text-decoration: none;
+  font-family: "Cagliostro", sans-serif;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  letter-spacing: 0.03em;
+  box-shadow: 0 10px 22px rgba(63, 34, 21, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  user-select: none;
+  backdrop-filter: blur(6px);
+}
+
+.page-listing-nav-button:hover,
+.page-listing-nav-button:focus-visible {
+  background: var(--beige);
+  color: var(--brown-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(63, 34, 21, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+  outline: none;
+}
+
+.page-listing-nav-button--prev {
+  left: clamp(1rem, 2.5vw, 2rem);
+}
+
+.page-listing-nav-button--next {
+  right: clamp(1rem, 2.5vw, 2rem);
+}
+
+@media (max-width: 640px) {
+  .page-listing-nav-button {
+    min-width: 6.75rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.78rem;
+  }
+}
+
 .logo {
   position: relative;
   width: var(--vw);

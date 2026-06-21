@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: var(--vh, 100vh);
   margin: 0;
   min-width: 100vw;
 }
@@ -184,7 +184,7 @@ body {
 .page2 .row {
   justify-content: center;
   align-items: stretch;
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .page2 #contentHeader {
@@ -240,7 +240,7 @@ body {
     position: absolute;
     top: 0%;
     left: 0%;
-    min-height: 100vh;
+    min-height: var(--vh, 100vh);
     min-width: 100vw;
     z-index: 0;
     visibility: hidden;
@@ -253,7 +253,7 @@ body {
     position: absolute;
     top: 0%;
     left: 0%;
-    min-height: 100vh;
+    min-height: var(--vh, 100vh);
     min-width: 100vw;
     z-index: 1;
     visibility: visible;
@@ -305,7 +305,7 @@ body {
 .page3 .row {
   justify-content: center;
   align-items: stretch;
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .page3 #introductionAboutMe {
@@ -458,7 +458,7 @@ body {
 .page4 .row {
   justify-content: center;
   align-items: stretch;
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .page4 .row #educationHeader {
@@ -471,7 +471,7 @@ body {
 }
 
 .page4 .row #educationHeader h1 {
-  margin-top: 2vh;
+  margin-top: calc(var(--vh, 100vh) * 0.02);
   color: var(--brown-dark);
   font-family: "Wendy One", sans-serif;
   font-weight: 400;
@@ -506,7 +506,7 @@ body {
   height: auto;
   object-fit: cover;
   display: block;
-  margin-top: 2vh;
+  margin-top: calc(var(--vh, 100vh) * 0.02);
   border: 1px solid var(--brown-dark);
   border-radius: 10px;
   transition: border-color 0.3s ease;
@@ -529,7 +529,7 @@ body {
 }
 
 .page4 .row #educationHeader .next-page-btn {
-  margin: 3vh 0;
+  margin: calc(var(--vh, 100vh) * 0.03) 0;
   padding: 9px 24px;
   font-family: "Cagliostro", sans-serif;
   font-size: 1.2rem;
@@ -570,7 +570,7 @@ body {
   align-items: flex-end;
   overflow: visible;
   padding-left: 80px;
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .page4 .row #educationList ul {
@@ -580,9 +580,9 @@ body {
   align-items: flex-end;
   overflow-y: auto;
   overflow-x: visible;
-  height: 100vh;
+  height: var(--vh, 100vh);
   margin: 0;
-  padding: 1vh 0 1vh 100px;
+  padding: calc(var(--vh, 100vh) * 0.01) 0 calc(var(--vh, 100vh) * 0.01) 100px;
   position: relative;
   scroll-behavior: smooth;
   overscroll-behavior: contain;
@@ -607,10 +607,10 @@ body {
   }
 
   .page4 .row #educationList {
-    height: var(--rem-height, 100vh);
+    height: var(--rem-height, var(--vh, 100vh));
   }
   .page4 .row #educationList ul {
-    height: var(--rem-height, 100vh);
+    height: var(--rem-height, var(--vh, 100vh));
   }
 
   .page4 .row #middle {
@@ -636,7 +636,7 @@ body {
 
 .page4 .row #educationList ul .list-item {
   background-color: var(--beige);
-  padding: 2vh 4vw;
+  padding: calc(var(--vh, 100vh) * 0.02) 4vw;
   border: 1px solid var(--brown-dark);
   border-radius: 10px 10px 10px 10px;
   cursor: pointer;
@@ -645,7 +645,7 @@ body {
   font-family: "Cagliostro", sans-serif;
   font-weight: 400;
   color: var(--brown-dark);
-  margin: 4vh 0;
+  margin: calc(var(--vh, 100vh) * 0.04) 0;
   position: relative;
   overflow: visible;
   transition: all 0.3s ease;
@@ -753,7 +753,7 @@ body {
   justify-content: center;
   align-items: stretch;
   overflow-y: auto;
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .page5 > .row > #skillsHeader {
@@ -797,7 +797,7 @@ body {
     position: absolute;
     top: 0%;
     left: 0%;
-    min-height: 100vh;
+    min-height: var(--vh, 100vh);
     min-width: 100vw;
     z-index: 0;
     visibility: hidden;
@@ -810,7 +810,7 @@ body {
     position: absolute;
     top: 0%;
     left: 0%;
-    min-height: 100vh;
+    min-height: var(--vh, 100vh);
     min-width: 100vw;
     z-index: 1;
     visibility: visible;
@@ -907,7 +907,7 @@ body {
   position: absolute;
   z-index: 512;
   width: 100vw !important;
-  height: 100vh !important;
+  height: var(--vh, 100vh) !important;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);

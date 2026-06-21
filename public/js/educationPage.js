@@ -1,4 +1,18 @@
 window.addEventListener("DOMContentLoaded", function () {
+  function getPageHeight() {
+    const doc = document.documentElement;
+    const body = document.body;
+
+    return Math.max(
+      doc.scrollHeight,
+      doc.offsetHeight,
+      doc.clientHeight,
+      body ? body.scrollHeight : 0,
+      body ? body.offsetHeight : 0,
+      window.innerHeight,
+    );
+  }
+
   function getEducationImageDimensions() {
     const educationHeader = document.getElementById("educationHeader");
     if (!educationHeader) {
@@ -37,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const educationHeader = document.getElementById("educationHeader");
     if (educationHeader) {
       const headerHeight = educationHeader.offsetHeight;
-      const remainingHeight = window.innerHeight - headerHeight;
+      const remainingHeight = Math.max(0, getPageHeight() - headerHeight);
       document.documentElement.style.setProperty(
         "--rem-height",
         remainingHeight + "px",
@@ -88,7 +102,7 @@ window.addEventListener("DOMContentLoaded", function () {
     images.innerHTML = "";
     loadedImages.forEach((img, index) => {
       if (loadedImages.length > 1) {
-        img.style.marginTop = "2vh";
+        img.style.marginTop = "calc(var(--vh, 100vh) * 0.02)";
         img.style.border = "1px solid #3f2215";
         img.style.borderRadius = "10px";
         img.style.transition = "all 0.4s ease";

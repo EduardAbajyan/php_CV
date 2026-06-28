@@ -18,7 +18,9 @@
                                             echo file_exists($imagePath) ?
                                                 base_url('asset/images/skillsPage/' . ($skillsData[$i]['image'] ?? 'default') . '.png') : 'https://picsum.photos/300/200?random=' . ($skillsData[$i]["id"] ?? '0'); ?>"
                                     class="card-img-top"
-                                    alt="<?php echo htmlspecialchars($skillsData[$i]['image'] ?? 'default'); ?>" />
+                                    alt="<?php echo htmlspecialchars($skillsData[$i]['image'] ?? 'default'); ?>"
+                                    loading="lazy"
+                                    decoding="async" />
                                 <div class="card-body">
                                     <p class="card-text"><?php echo htmlspecialchars($skillsData[$i]['header'] ?? ''); ?></p>
                                 </div>

@@ -32,7 +32,7 @@
                 <h1>Education</h1>
                 <div id="imageContainer" data-info="<?php echo base_url('asset/images'); ?>">
                     <a href="https://www.ysu.am/en" target="_blank">
-                        <img src="<?php echo base_url('asset/images/YSU.jpg') ?>" alt="YSU facade" />
+                        <img src="<?php echo base_url('asset/images/YSU.jpg') ?>" alt="YSU facade" loading="lazy" decoding="async" />
                     </a>
                 </div>
             </div>

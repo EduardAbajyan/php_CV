@@ -17,13 +17,28 @@
         'image' => asset('images/output.jpg'),
     ]); ?>
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        body {
+            display: block;
+            height: auto;
+            min-height: 100vh;
+            min-width: 100%;
+            margin: 0;
+        }
+
         .app-intro {
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, var(--beige) 0%, var(--white) 100%);
             padding: 2rem;
-            min-height: auto;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         .app-intro-content {
@@ -202,6 +217,7 @@
         @media (max-width: 768px) {
             .app-intro {
                 padding: 1.5rem 1rem;
+                align-items: flex-start;
             }
 
             .app-intro h1 {
@@ -285,6 +301,7 @@
         @media (max-width: 480px) {
             .app-intro {
                 padding: 1rem 0.8rem;
+                align-items: flex-start;
             }
 
             .app-intro h1 {

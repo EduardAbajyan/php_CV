@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('favicon.ico') ?>" />
     <script type="module" src="<?php echo base_url('asset/js/color-mode.js') ?>"></script>
+    <script defer src="<?php echo base_url('asset/js/lazy-images.js') ?>"></script>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -23,21 +24,6 @@
         'description' => 'Technical skills across PHP, JavaScript, TypeScript, SQL, Docker, and modern full-stack web development.',
         'path' => 'page5',
     ]); ?>
-    <script>
-        (function() {
-            var ua = navigator.userAgent;
-            var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
-            if (!isSafari) {
-                return;
-            }
-
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
-                    img.loading = 'eager';
-                });
-            });
-        })();
-    </script>
 </head>
 
 <body>

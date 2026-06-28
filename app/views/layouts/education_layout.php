@@ -35,7 +35,7 @@
                 <div id="imageContainer" data-info="<?php echo base_url('asset/images'); ?>">
                     <a href="https://www.ysu.am/en" target="_blank">
                         <img
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            src="<?php echo base_url('asset/images/YSU.jpg') ?>"
                             data-src="<?php echo base_url('asset/images/YSU.jpg') ?>"
                             alt="YSU facade"
                             loading="lazy"

@@ -4,19 +4,39 @@ document.addEventListener("DOMContentLoaded", function () {
       ".page5 > .row > #skillsList > .skill-category .row ul li .card img"
     );
 
+    skillItems.forEach((img) => {
+      img.style.height = "";
+    });
+
     let maxHeight = 0;
 
     skillItems.forEach((img) => {
-      if (img.naturalHeight > maxHeight) {
+      if (img.naturalHeight > 0 && img.naturalHeight > maxHeight) {
         maxHeight = img.naturalHeight;
       }
     });
+
+    if (maxHeight === 0) {
+      return;
+    }
 
     skillItems.forEach((img) => {
       img.style.height = maxHeight + "px";
       img.style.objectFit = "cover";
     });
+
+    return maxHeight;
   }
+
+  document
+    .querySelectorAll(
+      ".page5 > .row > #skillsList > .skill-category .row ul li .card img",
+    )
+    .forEach((img) => {
+      img.addEventListener("load", equalizeImageHeights);
+    });
+
+  requestAnimationFrame(equalizeImageHeights);
   window.addEventListener("load", equalizeImageHeights);
   window.addEventListener("resize", equalizeImageHeights);
 });

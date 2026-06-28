@@ -38,6 +38,7 @@
             background: linear-gradient(135deg, var(--beige) 0%, var(--white) 100%);
             padding: 2rem;
             min-height: 100vh;
+            min-height: 100svh;
             box-sizing: border-box;
         }
 
@@ -217,7 +218,6 @@
         @media (max-width: 768px) {
             .app-intro {
                 padding: 1.5rem 1rem;
-                align-items: flex-start;
             }
 
             .app-intro h1 {
@@ -301,7 +301,6 @@
         @media (max-width: 480px) {
             .app-intro {
                 padding: 1rem 0.8rem;
-                align-items: flex-start;
             }
 
             .app-intro h1 {
@@ -375,6 +374,12 @@
             .cta-button {
                 padding: 0.7rem 1.5rem;
                 font-size: 0.9rem;
+            }
+        }
+
+        @media (max-height: 700px) {
+            .app-intro {
+                align-items: flex-start;
             }
         }
     </style>

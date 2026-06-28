@@ -23,6 +23,21 @@
         'path' => 'page4',
         'image' => asset('images/YSU.jpg'),
     ]); ?>
+    <script>
+        (function() {
+            var ua = navigator.userAgent;
+            var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+            if (!isSafari) {
+                return;
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+                    img.loading = 'eager';
+                });
+            });
+        })();
+    </script>
 </head>
 
 <body>

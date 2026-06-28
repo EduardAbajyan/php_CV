@@ -22,6 +22,21 @@
         'description' => 'Technical skills across PHP, JavaScript, TypeScript, SQL, Docker, and modern full-stack web development.',
         'path' => 'page5',
     ]); ?>
+    <script>
+        (function() {
+            var ua = navigator.userAgent;
+            var isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+            if (!isSafari) {
+                return;
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('img[loading="lazy"]').forEach(function(img) {
+                    img.loading = 'eager';
+                });
+            });
+        })();
+    </script>
 </head>
 
 <body>

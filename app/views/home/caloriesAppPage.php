@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cagliostro&family=Wendy+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo asset('css/styles.css') ?>">
+    <link rel="stylesheet" href="<?php echo asset('css/pages/shared.css') ?>">
     <?php render_page_metadata([
         'title' => 'Calories App Case Study | Eduard Abajyan',
         'description' => 'Case study for a nutrition tracking application built by Eduard Abajyan with a focus on usability, structure, and frontend polish.',

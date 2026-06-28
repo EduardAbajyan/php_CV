@@ -1,0 +1,196 @@
+.page5 {
+  min-height: 100%;
+  max-width: 100%;
+}
+
+.page5 > .row {
+  justify-content: center;
+  align-items: stretch;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.page5 > .row > #skillsHeader {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page5 > .row > #skillsHeader h2 {
+  font-family: "Wendy One", sans-serif;
+  font-weight: 400;
+  font-variant: small-caps;
+  font-size: 5vw;
+  color: var(--brown-dark);
+}
+
+.page5 > .row > #skillsList {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.page5 > .row > #skillsList .skill-category {
+  padding: 2% 4%;
+  border-bottom: 1px solid var(--brown-dark);
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .page5 > .row #skillsList {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    animation: hideAndShow 2s ease-in-out forwards;
+  }
+
+  .page5 > .row #skillsHeader {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    animation: showAndHide 2s ease-in-out forwards;
+  }
+
+  @keyframes hideAndShow {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    50% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    75% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes showAndHide {
+    0% {
+      visibility: visible;
+      opacity: 1;
+    }
+    50% {
+      visibility: visible;
+      opacity: 0.3;
+    }
+    75% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+.page5 > .row > #skillsList > .skill-category {
+  margin-bottom: 4vh;
+}
+.page5 > .row > #skillsList > .skill-category h4 {
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--brown-dark);
+  margin-bottom: 3%;
+}
+
+.page5 > .row > #skillsList > .skill-category .row ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.page5 > .row > #skillsList > .skill-category .row ul li {
+  font-family: "Cagliostro", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--brown-dark);
+  margin: 1vh;
+}
+
+.page5 > .row > #skillsList > .skill-category .row ul li .card {
+  border: 1px solid var(--brown-dark);
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.skill-item {
+  cursor: pointer;
+}
+.skill-item .card {
+  pointer-events: none;
+}
+
+.skill-item .card .card-body p {
+  color: var(--brown-dark)
+} 
+
+.dark-overlay {
+  position: absolute;
+  z-index: 512;
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.skill-info-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--beige);
+  border: 1px solid var(--brown-dark);
+  border-radius: 8px;
+  padding: 10px;
+  width: min(50%,400px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Cagliostro", sans-serif;
+  font-size: 0.9rem;
+  color: var(--brown-dark);
+  z-index: 1024;
+}
+
+.skill-info-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--brown-dark);
+}
+
+/* end of Page5 */

@@ -1,0 +1,288 @@
+.page4 .row {
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.page4 .row #educationHeader {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 300px;
+}
+
+.page4 .row #educationHeader h1 {
+  margin-top: 2vh;
+  color: var(--brown-dark);
+  font-family: "Wendy One", sans-serif;
+  font-weight: 400;
+  font-variant: small-caps;
+  font-size: 5vw;
+  user-select: none;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page4 .row #educationHeader div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page4 .row #educationHeader img {
+  width: 75%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-top: 2vh;
+  border: 1px solid var(--brown-dark);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  opacity: 90%;
+}
+
+.page4 .row #educationHeader img:hover {
+  border-color: #6b4423;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page4 .row #educationHeader .next-page-btn {
+  margin: 3vh 0;
+  padding: 9px 24px;
+  font-family: "Cagliostro", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--brown-dark);
+  background-color: var(--beige);
+  border: 2px solid var(--brown-dark);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page4 .row #educationHeader .next-page-btn:hover {
+  background-color: #fffaf0;
+  border-color: #6b4423;
+  color: #6b4423;
+}
+
+.page4 .row #educationHeader .next-page-btn:active {
+  opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page4 .row #educationList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: visible;
+  padding-left: 80px;
+  height: 100vh;
+}
+
+.page4 .row #educationList ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  overflow-y: auto;
+  overflow-x: visible;
+  height: 100vh;
+  margin: 0;
+  padding: 1vh 0 1vh 100px;
+  position: relative;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 768px) {
+  .page4.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page4 .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .page4 .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page4 .row #educationList {
+    height: var(--rem-height, 100vh);
+  }
+  .page4 .row #educationList ul {
+    height: var(--rem-height, 100vh);
+  }
+
+  .page4 .row #middle {
+    display: none;
+  }
+}
+
+.page4 .row #educationList ul::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    var(--brown-dark) 0%,
+    var(--brown-medium) 50%,
+    var(--brown-dark) 100%
+  );
+  border-radius: 2px;
+}
+
+.page4 .row #educationList ul .list-item {
+  background-color: var(--beige);
+  padding: 2vh 4vw;
+  border: 1px solid var(--brown-dark);
+  border-radius: 10px 10px 10px 10px;
+  cursor: pointer;
+  min-width: 50vw;
+  list-style-type: none;
+  font-family: "Cagliostro", sans-serif;
+  font-weight: 400;
+  color: var(--brown-dark);
+  margin: 4vh 0;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s ease;
+}
+
+.page4 .row #educationList ul .list-item:hover {
+  background-color: var(--white);
+  border-color: #6b4423;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.page4 .row #educationList ul .list-item::after {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 29px solid transparent;
+  border-bottom: 29px solid transparent;
+  border-right: 20px solid var(--beige);
+  border-left: 2px solid var(--brown-dark);
+  transition: all 0.3s ease;
+}
+
+.page4 .row #educationList ul .list-item:hover::after {
+  border-right-color: var(--white);
+}
+
+.page4 .row #educationList ul .list-item::before {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: var(--icon-url);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  border: 1px solid var(--brown-dark);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.page4 .row #educationList ul .list-item:hover::before {
+  transform: translateY(-50%);
+}
+
+.page4 .row #educationList ul .list-item h1 {
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-size: 2.5vh;
+  font-style: normal;
+  margin-bottom: 1vh;
+  transition: color 0.3s ease;
+}
+
+.page4 .row #educationList ul .list-item:hover h1 {
+  color: var(--brown-medium);
+}
+
+.page4 .row #educationList ul .list-item h2 {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-size: 1.5vh;
+  font-style: normal;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.page4 .row #educationList ul .list-item:hover h2 {
+  opacity: 1;
+}
+
+@media (max-width: 720px) {
+  html,
+  body {
+    overflow: auto;
+  }
+}
+
+/* end of Page4 */

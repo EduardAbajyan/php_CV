@@ -10,7 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cagliostro&family=Wendy+One&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="<?= asset('css/styles.css') ?>">
+    <link rel="stylesheet" href="<?= asset('css/pages/shared.css') ?>">
+    <link rel="stylesheet" href="<?= asset('css/pages/page7.css') ?>">
     <?php render_page_metadata([
         'title' => 'Contact Eduard Abajyan',
         'description' => 'Get in touch with Eduard Abajyan for freelance, collaboration, or full-stack web development opportunities.',

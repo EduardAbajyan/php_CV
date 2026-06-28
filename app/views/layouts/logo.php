@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="module" src="<?php echo base_url('asset/js/logoHeader.js') ?>"></script>
     <script type="module" src="<?php echo base_url('asset/js/color-mode.js') ?>"></script>
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/styles.css') ?>" />
+    <link rel="stylesheet" href="<?php echo asset('css/pages/shared.css') ?>" />
+    <link rel="stylesheet" href="<?php echo asset('css/pages/page1.css') ?>" />
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('favicon.ico') ?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

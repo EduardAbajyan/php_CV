@@ -16,7 +16,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cagliostro&family=Wendy+One&family=Emilys+Candy&family=Nanum+Myeongjo&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/styles.css') ?>" />
+    <link rel="stylesheet" href="<?php echo asset('css/pages/shared.css') ?>" />
+    <link rel="stylesheet" href="<?php echo asset('css/pages/page4.css') ?>" />
     <?php render_page_metadata([
         'title' => 'Education | Eduard Abajyan',
         'description' => 'Education, certifications, and continuous learning highlights from Eduard Abajyan\'s full-stack developer CV.',

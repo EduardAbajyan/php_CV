@@ -17,7 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Cagliostro&family=Corinthia:wght@400;700&family=Niconne&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="<?php echo base_url('asset/css/styles.css') ?>" />
+    <link rel="stylesheet" href="<?php echo asset('css/pages/shared.css') ?>" />
+    <link rel="stylesheet" href="<?php echo asset('css/pages/page3.css') ?>" />
     <?php render_page_metadata([
         'title' => 'About Eduard Abajyan | Full-Stack Developer',
         'description' => 'Learn about Eduard Abajyan, a full-stack web developer focused on building clear, user-friendly web applications.',

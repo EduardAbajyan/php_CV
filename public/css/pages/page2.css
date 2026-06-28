@@ -1,0 +1,120 @@
+.page2 .row {
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.page2 #contentHeader {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.page2 #contentHeader h1 {
+  font-family: "Wendy One", sans-serif;
+  font-weight: 400;
+  font-variant: small-caps;
+  font-size: 5vw;
+  color: var(--brown-dark);
+}
+
+.page2 #theList {
+  padding: 0;
+  margin: 0;
+}
+
+.page2 #theList ul {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.page2 #theList ul li {
+  font-size: 4rem;
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 400;
+  color: var(--brown-dark);
+}
+
+.page2 #theList ul li a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: var(--brown-dark);
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .page2 #theList {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    animation: hideAndShow 2s ease-in-out forwards;
+  }
+
+  .page2 #contentHeader {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    animation: showAndHide 2s ease-in-out forwards;
+  }
+
+  @keyframes hideAndShow {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    50% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    75% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes showAndHide {
+    0% {
+      visibility: visible;
+      opacity: 1;
+    }
+    50% {
+      visibility: visible;
+      opacity: 0.3;
+    }
+    75% {
+      visibility: visible;
+      opacity: 0;
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+/* end of Page2 */
